@@ -9,6 +9,11 @@ public class CentroDeportivo {
         entrenadores = new Entrenador[NUM_MAX_ENTRENADORES];
     }
 
+    /**
+     * Metodo PUBLICO que busca un entrenador por un ID en el array entrenadores
+     * @param id
+     * @return entrenadorEncontrado Devuelve el ID del entrenador que ha sido encontrado en la Variable "entrenadorEncontrado" que en ella se guarda "entrenadores[i]"
+     */
     public Entrenador buscarEntrenador(int id){
         boolean seguirBuscando = true;
         Entrenador entrenadorEncontrado = null;
