@@ -5,5 +5,11 @@ public class Entrenador {
     private String especialidad;
     private int anosExperiencia;
 
+    public Entrenador(int id, String nombre, String especialidad, int anosExperiencia) {
+        this.id = id;
+        this.nombre = nombre;
+        this.especialidad = especialidad;
+        this.anosExperiencia = anosExperiencia;
 
+    }
 }
