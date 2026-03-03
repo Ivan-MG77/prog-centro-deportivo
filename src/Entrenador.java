@@ -22,13 +22,21 @@ public class Entrenador {
 
     public String getEspecialidad() {
         return this.especialidad;
-
     }
 
     public int anosExperiencia() {
         return this.anosExperiencia;
     }
 
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder("Entrenador:");
 
+        sb.append(String.format("\n ID = ", this.id));
+        sb.append(String.format("Titulo: %s ", this.nombre));
+        sb.append(String.format("Especialidad: %s", this.especialidad));
+        sb.append(String.format("Años de Experiencia: %d", this.anosExperiencia));
+
+        return sb.toString();
     }
 }
