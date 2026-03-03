@@ -33,4 +33,27 @@ public class CentroDeportivo {
         return entrenadorEncontrado;
     }
 
+    private int buscarPrimerHuecoLibre(){
+        int primeraPosicionLibre = -1;
+        boolean seguirBuscando = true;
+
+        for (int i = 0; i < NUM_MAX_ENTRENADORES; i++) {
+            if (entrenadores[i] != null) {
+                primeraPosicionLibre = i;
+                seguirBuscando = false;
+            }
+        }
+        return primeraPosicionLibre;
+    }
+
+    public boolean registrarEntrenador(Entrenador entrenador){
+
+    }
+    public String mostrarEntrenadores(){
+
+    }
+    public int contarEntrenadores(){
+
+    }
+
 }
