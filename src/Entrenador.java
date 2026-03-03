@@ -10,6 +10,25 @@ public class Entrenador {
         this.nombre = nombre;
         this.especialidad = especialidad;
         this.anosExperiencia = anosExperiencia;
+    }
+
+    public int getId() {
+        return this.id;
+    }
+
+    public String getNombre() {
+        return this.nombre;
+    }
+
+    public String getEspecialidad() {
+        return this.especialidad;
+
+    }
+
+    public int anosExperiencia() {
+        return this.anosExperiencia;
+    }
+
 
     }
 }
