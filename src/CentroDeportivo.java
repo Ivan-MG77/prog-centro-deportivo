@@ -37,8 +37,8 @@ public class CentroDeportivo {
         int primeraPosicionLibre = -1;
         boolean seguirBuscando = true;
 
-        for (int i = 0; i < NUM_MAX_ENTRENADORES; i++) {
-            if (entrenadores[i] != null) {
+        for (int i = 0; i < NUM_MAX_ENTRENADORES && seguirBuscando; i++) {
+            if (entrenadores[i] == null) {
                 primeraPosicionLibre = i;
                 seguirBuscando = false;
             }
@@ -47,13 +47,41 @@ public class CentroDeportivo {
     }
 
     public boolean registrarEntrenador(Entrenador entrenador){
+        boolean resultadoRegistrar = false;
+        int hueco = buscarPrimerHuecoLibre();
 
+        if (entrenador != null && hueco != -1 && buscarEntrenador(entrenador.getId()) == null) {
+            entrenadores[hueco] = entrenador;
+            resultadoRegistrar = true;
+        }
+        return resultadoRegistrar;
     }
+
+
+
+
     public String mostrarEntrenadores(){
 
+        StringBuilder sb = new StringBuilder("Entrenadores: {");
+
+        for (int i = 0; i < NUM_MAX_ENTRENADORES; i++) {
+            if (entrenadores[i] != null) {
+                sb.append(entrenadores[i].toString());
+            }
+        }
+        sb.append("\n}");
+        return sb.toString();
     }
+
     public int contarEntrenadores(){
+        int contador = 0;
 
+        for (int i = 0; i < NUM_MAX_ENTRENADORES; i++) {
+            if (entrenadores[i] != null) {
+                contador++;
+
+            }
+        }
+        return contador;
     }
-
 }
